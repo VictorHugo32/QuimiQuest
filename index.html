@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#0b1026" />
+    <meta
+      name="description"
+      content="QuimiQuest: aprenda Química em desafios rápidos, níveis e salas de estudo."
+    />
+    <title>QuimiQuest — aprender jogando</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="is-landing">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#inicio" aria-label="QuimiQuest início"
+          ><span class="brand-mark">Q<span>+</span></span
+          ><span>quimi<span class="brand-light">quest</span></span></a
+        >
+        <nav>
+          <button class="nav-link active" data-view="inicio">Início</button
+          ><button class="nav-link" data-view="aluno">Área do aluno</button
+          ><button class="nav-link" data-view="professor">Professor</button>
+        </nav>
+        <div class="top-chip"><i></i> Química em jogo</div>
+      </header>
+      <main>
+        <section id="view-inicio" class="view active">
+          <div class="landing-stars" aria-hidden="true">
+            <span class="star star-a">✦</span>
+            <span class="star star-b">✧</span>
+            <span class="star star-c">✦</span>
+            <span class="star star-d">·</span>
+            <span class="star star-e">✧</span>
+            <span class="landing-orbit orbit-a"></span>
+            <span class="landing-orbit orbit-b"></span>
+            <span class="landing-glow glow-left"></span>
+            <span class="landing-glow glow-right"></span>
+          </div>
+          <div class="landing-content">
+            <div class="landing-logo" aria-label="QuimiQuest">
+              <span class="landing-emblem" aria-hidden="true">
+                <svg viewBox="0 0 48 48" role="presentation">
+                  <path d="M17 6h14M21 6v12L11 36a5 5 0 0 0 4 7h18a5 5 0 0 0 4-7L27 18V6" />
+                  <path d="M15 33h18M20 29l3-3 3 3 4-5" />
+                  <path d="M35 11l1.5 3.5L40 16l-3.5 1.5L35 21l-1.5-3.5L30 16l3.5-1.5L35 11Z" />
+                </svg>
+              </span>
+              <span class="landing-wordmark">Quimi<span>Quest</span></span>
+              <span class="landing-tagline">QUÍMICA · DESCOBERTA · AVENTURA</span>
+            </div>
+            <div class="role-picker">
+              <h1>Quem está entrando?</h1>
+              <p>Escolha seu caminho pelo laboratório.</p>
+              <div class="role-cards">
+                <button class="role-card role-student" data-go="aluno">
+                  <span class="role-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                      <path d="M18 10h12M21 10v10L12 35a5 5 0 0 0 4 8h16a5 5 0 0 0 4-8l-9-15V10" />
+                      <path d="M16 32h16M21 28l4 2 5-5" />
+                      <circle cx="35" cy="13" r="5" />
+                      <path d="M35 10.5v5M32.5 13h5" />
+                    </svg>
+                  </span>
+                  <span class="role-copy"
+                    ><strong>Aluno</strong><small>Entrar em uma missão</small></span
+                  >
+                  <span class="role-arrow" aria-hidden="true">↗</span>
+                </button>
+                <button class="role-card role-teacher" data-go="professor">
+                  <span class="role-icon" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" fill="none">
+                      <rect x="6" y="8" width="26" height="22" rx="3" />
+                      <path d="M12 15h13M12 20h9M14 37h10M19 30v7" />
+                      <circle cx="35" cy="20" r="5" />
+                      <path d="M28 39c.6-5 3-8 7-8s6.4 3 7 8M32 25l3 3 3-3" />
+                    </svg>
+                  </span>
+                  <span class="role-copy"
+                    ><strong>Professor</strong><small>Gerenciar atividades</small></span
+                  >
+                  <span class="role-arrow" aria-hidden="true">↗</span>
+                </button>
+              </div>
+            </div>
+            <div class="landing-footnote">
+              <span>✦</span> Um novo experimento começa aqui <span>✦</span>
+            </div>
+          </div>
+        </section>
+        <section id="view-aluno" class="view">
+          <div class="page-heading">
+            <div class="eyebrow">ÁREA DO ALUNO</div>
+            <h1>Pronto para o <em>desafio?</em></h1>
+            <p>Escolha como quer jogar. Seu progresso fica salvo neste dispositivo.</p>
+          </div>
+          <div class="student-layout">
+            <div class="form-card">
+              <div class="card-step">
+                <span>01</span>
+                <div><b>Prepare sua partida</b><small>Leva só um instante</small></div>
+              </div>
+              <label for="student-name">Seu nome de jogador</label
+              ><input
+                id="student-name"
+                maxlength="24"
+                placeholder="Ex.: Explorador(a) da Química"
+                autocomplete="nickname"
+              /><label for="room-code">Código da sala <span class="optional">opcional</span></label
+              ><input
+                id="room-code"
+                maxlength="8"
+                placeholder="Ex.: QD4821"
+                class="uppercase"
+              /><label for="level-select">Escolha um nível</label
+              ><select id="level-select"></select
+              ><button class="btn btn-primary full" id="start-game">
+                Começar desafio <span>→</span>
+              </button>
+              <div class="form-note">✦ Cada desafio tem 14 perguntas. Boa jornada!</div>
+            </div>
+            <aside class="side-panel">
+              <div class="side-orb">⚛</div>
+              <div class="eyebrow">SUA MISSÃO</div>
+              <h3>Pequenas perguntas.<br />Grandes descobertas.</h3>
+              <p>Leia com atenção, escolha sua resposta e acompanhe sua pontuação no final.</p>
+              <div class="mini-progress">
+                <span>10 níveis</span>
+                <div><i></i></div>
+                <span>140 questões</span>
+              </div>
+            </aside>
+          </div>
+          <div id="game-panel" class="game-panel hidden"></div>
+          <div id="result-panel" class="result-panel hidden"></div>
+        </section>
+        <section id="view-professor" class="view">
+          <div class="page-heading">
+            <div class="eyebrow">ESPAÇO DO PROFESSOR</div>
+            <h1>Acompanhe cada <em>conquista.</em></h1>
+            <p>Crie uma sala, compartilhe o código e veja os resultados da turma.</p>
+          </div>
+          <div class="teacher-layout">
+            <div class="form-card">
+              <div class="card-step">
+                <span>✦</span>
+                <div><b>Criar uma sala</b><small>Compartilhe o código com seus alunos</small></div>
+              </div>
+              <label for="teacher-name">Nome do professor</label
+              ><input id="teacher-name" maxlength="40" placeholder="Ex.: Prof.ª Ana" /><label
+                for="teacher-email"
+                >E-mail para receber resultados <span class="optional">opcional</span></label
+              ><input id="teacher-email" type="email" placeholder="professor@escola.com" /><button
+                id="create-room"
+                class="btn btn-primary full"
+              >
+                Criar sala <span>＋</span>
+              </button>
+              <p class="form-note">
+                Os resultados ficam salvos neste navegador. O envio de e-mail pode ser configurado
+                pela escola.
+              </p>
+              <div id="room-created" class="room-created hidden"></div>
+            </div>
+            <div class="teacher-info">
+              <div class="teacher-info-icon">▤</div>
+              <div class="eyebrow">PAINEL DA TURMA</div>
+              <h3>Aprendizagem à vista.</h3>
+              <p>
+                Consulte os desafios concluídos neste dispositivo, filtre por sala e acompanhe
+                pontuações.
+              </p>
+              <div class="teacher-metrics">
+                <div><b id="total-results">0</b><span>partidas concluídas</span></div>
+                <div><b id="average-score">—</b><span>média de acertos</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="results-heading">
+            <div>
+              <div class="eyebrow">ATIVIDADE RECENTE</div>
+              <h2>Resultados dos alunos</h2>
+            </div>
+            <div class="result-tools">
+              <input
+                id="filter-room"
+                placeholder="Filtrar por código"
+                aria-label="Filtrar por código da sala"
+              /><button class="btn btn-outline" id="export-results">Exportar CSV ↓</button>
+            </div>
+          </div>
+          <div id="results-list" class="results-list"></div>
+          <div class="privacy-note">
+            Os dados são armazenados apenas neste navegador. Exportar CSV permite compartilhar ou
+            arquivar os resultados.
+          </div>
+        </section>
+      </main>
+      <footer>
+        <a class="brand footer-brand" href="#inicio"
+          ><span class="brand-mark">Q<span>+</span></span
+          ><span>quimi<span class="brand-light">quest</span></span></a
+        ><span>Feito para despertar a curiosidade. <b>✦</b></span
+        ><span>© QuimiQuest</span>
+      </footer>
+    </div>
+    <div class="music-player">
+      <audio id="game-music" preload="none"></audio>
+      <button
+        id="music-toggle"
+        class="music-toggle"
+        type="button"
+        aria-pressed="false"
+        aria-label="Ativar música"
+      >
+        <span class="music-symbol" aria-hidden="true">♫</span>
+        <span id="music-status" aria-live="polite">Ativar música</span>
+      </button>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
